@@ -63,7 +63,7 @@ def xml_parser(file):
 
                 # create a csv from our dictionary
                 dict_to_csv(d, '/path/to/your/csv/data')
-                # dict_to_csv(d, '/Users/mehdi/PycharmProjects/Discovery/Radio/asb')
+                
 
 
         # make sure to use clear funtion to not to destroy your RAM
