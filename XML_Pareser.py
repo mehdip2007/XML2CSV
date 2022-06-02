@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 import csv
 import os
 
-
+# Download the XML files from FTP server
 def get_xmls(username, passwd, ftp_server, ftp_directory):
     ftp = FTP(ftp_server)
     ftp.login(user=username, passwd=passwd)
@@ -31,15 +31,10 @@ def get_identifier(dictionary):
 
 
 def xml_to_csv(dictionary, ident):
-    header = set()
-    for outer_key, outer_val in dictionary.items():
-        for val in outer_val:
-            for k, v in val.items():
-                header.add(k)
-
     dictionary['Identifier'] = ident
     # pprint(dictionary)
 
+    # Need to Add identifier base one of our column name in order to timport into our Inventory system
     for outer_key, outer_val in dictionary.items():
         if outer_key != "Identifier":
             for each in outer_val:
