@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 
-tmp_csv_path = '/path/to/CSV/already/generated/OSS10/'
+tmp_csv_path = '/path/to/CSV/already/generated/'
 final_csv_path = '/path/to/merge/result//'
 
 # create an empty dataframe to compare with the previous dataframe used in read file
